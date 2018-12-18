@@ -4,6 +4,7 @@ namespace Fingo\LaravelCacheFallback;
 
 use Exception;
 use Illuminate\Cache\CacheManager;
+use Illuminate\Log\Writer;
 
 /**
  * Class CacheFallback
@@ -23,6 +24,13 @@ class CacheFallback extends CacheManager
         try {
             return parent::resolve($name);
         } catch (Exception $e) {
+			$logger = app()->make(Writer::class);
+			$logger->critical('Cache driver failed to resolve, using fallback', [
+				'driver' => $name,
+				'message' => $e->getMessage(),
+				'file' => $e->getFile(),
+				'line' => $e->getLine()
+				]);
             if ($newDriver = $this->nextDriver($name)) {
                 return $this->resolve($newDriver);
             }
