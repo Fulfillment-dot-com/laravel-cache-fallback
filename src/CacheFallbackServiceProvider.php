@@ -46,6 +46,8 @@ class CacheFallbackServiceProvider extends CacheServiceProvider
             return new MemcachedConnector;
         });
 
-        $this->registerCommands();
+        if(isset($this->registerCommands)) {
+        	$this->registerCommands();
+        }
     }
 }
