@@ -6,6 +6,8 @@
 [![Total Downloads][ico-downloads]][link-downloads]
 [![Code Quality][cq-badge]][cq-link]
 
+**This is a fork of [fingo/laravel-cache-fallback](https://github.com/fingo/laravel-cache-fallback) for maintaining compatibility with Laravel.**
+
 Package for falling back cache drivers if current is not available.
 
 Be advised that if the last driver fails, normal laravel Error is thrown
