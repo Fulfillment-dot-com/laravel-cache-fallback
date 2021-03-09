@@ -1,5 +1,5 @@
 {
-  "name": "fingo/laravel-cache-fallback",
+  "name": "fulfillment/laravel-cache-fallback",
   "type": "library",
   "description": "Provides fallback mechanisms for cache handlers",
   "keywords": [
@@ -11,12 +11,16 @@
     "laravel-cache-fallback"
   ],
   "license": "Apache-2.0",
-  "homepage": "https://github.com/fingo/laravel-cache-fallback",
+  "homepage": "https://github.com/Fulfillment-dot-com/laravel-cache-fallback",
   "authors": [
+    {
+      "name": "FoxxMD",
+      "role": "Fork Maintainer"
+    },
     {
       "name": "Hubert Jedrzejek",
       "email": "hubert.jedrzejek@fingo.pl",
-      "role": "Developer"
+      "role": "Original Developer"
     }
   ],
   "require": {
